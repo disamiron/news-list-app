@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NewsService } from 'src/app/services/news/news.service';
 import { News } from 'src/app/services/news/news.service.type';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
+@UntilDestroy()
 @Component({
   selector: 'app-news-info',
   templateUrl: './news-info.component.html',
@@ -19,7 +21,7 @@ export class NewsInfoPageComponent implements OnInit {
   public ngOnInit(): void {
     this._newsService
       .getNews(this._route.snapshot.params['url'])
-      .pipe()
+      .pipe(untilDestroyed(this))
       .subscribe((v) => {
         this.news = v;
       });

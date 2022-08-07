@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/services/news/news.service';
 import { News } from 'src/app/services/news/news.service.type';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
+@UntilDestroy()
 @Component({
   selector: 'app-news-list',
   templateUrl: './news-list.component.html',
@@ -23,7 +25,7 @@ export class NewsListPageComponent implements OnInit {
   public getNews() {
     this._newsService
       .getAllNews(this._page)
-      .pipe()
+      .pipe(untilDestroyed(this))
       .subscribe((v) => {
         this._areAllNewsFetched = v.totalCount < this._page * this._size;
         this.newsArray.push(...v.news);
