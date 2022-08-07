@@ -22,7 +22,7 @@ export class NewsListPageComponent implements OnInit {
 
   public getNews() {
     this._newsService
-      .getNews(this._page)
+      .getAllNews(this._page)
       .pipe()
       .subscribe((v) => {
         this._areAllNewsFetched = v.totalCount < this._page * this._size;

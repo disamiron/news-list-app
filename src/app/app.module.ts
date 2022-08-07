@@ -5,10 +5,17 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsListPageComponent } from './pages/news-list/news-list.component';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NewsInfoPageComponent } from './pages/news-info/news-info.component';
 import { NewsPreviewComponent } from './component/news-preview/news-preview.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 @NgModule({
-  declarations: [AppComponent, NewsListPageComponent, NewsPreviewComponent],
+  declarations: [
+    AppComponent,
+    NewsListPageComponent,
+    NewsInfoPageComponent,
+    NewsPreviewComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

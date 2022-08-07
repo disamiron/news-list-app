@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { News } from 'src/app/services/news/news.service.type';
 
 @Component({
@@ -7,5 +8,11 @@ import { News } from 'src/app/services/news/news.service.type';
   styleUrls: ['./news-preview.component.scss'],
 })
 export class NewsPreviewComponent {
+  constructor(private _router: Router) {}
+
   @Input() public news: News | null = null;
+
+  public goToNews(url: string) {
+    this._router.navigateByUrl(url);
+  }
 }

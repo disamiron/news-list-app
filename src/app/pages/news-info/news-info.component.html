@@ -1,17 +1,16 @@
 <div *ngIf="news" class="preview">
-  <div class="news" (click)="goToNews(news.url)">
+  <div class="news">
+    <div class="img">
+      <img [src]="news.titleImageUrl" />
+    </div>
     <div class="info">
       <div class="description">
         <p class="main" [title]="news.description">{{ news.description }}</p>
         <p class="title" [title]="news.title">{{ news.title }}</p>
       </div>
       <div class="data">
-        <span>{{ news.categoryType }}</span>
         <span>{{ news.publishedDate | date }}</span>
       </div>
-    </div>
-    <div class="img">
-      <img [src]="news.titleImageUrl" />
     </div>
   </div>
 </div>
