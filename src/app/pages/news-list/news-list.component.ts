@@ -9,7 +9,7 @@ import { News } from 'src/app/services/news/news.service.type';
 })
 export class NewsListPageComponent implements OnInit {
   private _page = 1;
-
+  private _size = 10;
   private _areAllNewsFetched = false;
 
   constructor(private _newsService: NewsService) {}
@@ -25,6 +25,7 @@ export class NewsListPageComponent implements OnInit {
       .getNews(this._page)
       .pipe()
       .subscribe((v) => {
+        this._areAllNewsFetched = v.totalCount < this._page * this._size;
         this.newsArray.push(...v.news);
       });
   }

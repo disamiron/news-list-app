@@ -6,9 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsListPageComponent } from './pages/news-list/news-list.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-
+import { NewsPreviewComponent } from './component/news-preview/news-preview.component';
 @NgModule({
-  declarations: [AppComponent, NewsListPageComponent],
+  declarations: [AppComponent, NewsListPageComponent, NewsPreviewComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
