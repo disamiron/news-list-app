@@ -1,0 +1,5 @@
+<div infiniteScroll (scrolled)="onScroll()">
+  <div *ngFor="let news of newsArray">
+    <p>{{ news.title }}</p>
+  </div>
+</div>

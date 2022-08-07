@@ -1,3 +1,8 @@
+export interface NewsPack {
+  news: News[];
+  totalCount: number;
+}
+
 export interface News {
   id?: number;
   categoryType: string;

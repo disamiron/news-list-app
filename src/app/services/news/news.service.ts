@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { News } from './news.service.type';
+import { News, NewsPack } from './news.service.type';
 import { HttpClient } from '@angular/common/http';
 import { NEWS_URL } from 'src/app/data/constants';
 
@@ -12,6 +12,6 @@ export class NewsService {
   public Limit = 10;
 
   public getNews(page: number) {
-    return this.http.get<{ news: News[] }>(NEWS_URL + page + '/' + this.Limit);
+    return this.http.get<NewsPack>(NEWS_URL + page + '/' + this.Limit);
   }
 }

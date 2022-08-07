@@ -7,6 +7,7 @@ import { NewsService } from './services/news/news.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  title = 'news-list-app';
   constructor(private _newsService: NewsService) {}
 
   public ngOnInit(): void {}
