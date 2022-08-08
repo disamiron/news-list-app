@@ -11,6 +11,7 @@ export class NewsPreviewComponent {
   constructor(private _router: Router) {}
 
   @Input() public news: News | null = null;
+  @Input() public localNews: boolean = false;
 
   public goToNews(url: string) {
     this._router.navigateByUrl(url);

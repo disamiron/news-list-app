@@ -1,3 +1,21 @@
+<div class="managment mb-30">
+  <button mat-button class="add" (click)="createNews()">
+    Добавить новость
+  </button>
+  <button
+    *ngIf="localNewsArray?.length"
+    mat-button
+    class="remove"
+    (click)="removeLocalNews()"
+  >
+    Очистить локальные новости
+  </button>
+</div>
+<div class="news-list mb-30">
+  <div *ngFor="let news of localNewsArray">
+    <app-news-preview [news]="news" [localNews]="true"></app-news-preview>
+  </div>
+</div>
 <div infiniteScroll (scrolled)="onScroll()" class="news-list">
   <div *ngFor="let news of newsArray">
     <app-news-preview [news]="news"></app-news-preview>

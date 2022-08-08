@@ -1,0 +1,27 @@
+<form [formGroup]="form" class="form">
+  <span>Введите заголовок</span>
+  <input formControlName="description" class="description" />
+
+  <span>Введите описание</span>
+  <textarea formControlName="title" class="title"></textarea>
+</form>
+
+<div class="buttons">
+  <input
+    type="file"
+    accept="image/png, image/jpeg"
+    (change)="onFileSelected()"
+    id="file"
+  />
+  <button
+    mat-button
+    class="confirm"
+    (click)="saveNews()"
+    [disabled]="form.invalid"
+  >
+    Сохранить
+  </button>
+  <button mat-button mat-dialog-close="cancel" class="cancel" color="gray">
+    Отменить
+  </button>
+</div>

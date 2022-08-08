@@ -1,4 +1,4 @@
-<div *ngIf="news" class="preview">
+<div *ngIf="news" class="preview" [ngClass]="{ local: localNews }">
   <div class="news" (click)="goToNews(news.url)">
     <div class="info">
       <div class="description">

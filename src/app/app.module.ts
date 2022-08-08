@@ -8,6 +8,12 @@ import { NewsListPageComponent } from './pages/news-list/news-list.component';
 import { NewsInfoPageComponent } from './pages/news-info/news-info.component';
 import { NewsPreviewComponent } from './component/news-preview/news-preview.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NewsCreateComponent } from './component/news-create/news-create.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -15,6 +21,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     NewsListPageComponent,
     NewsInfoPageComponent,
     NewsPreviewComponent,
+    NewsCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,13 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     HttpClientModule,
     CommonModule,
     InfiniteScrollModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
   ],
+  exports: [MatDialogModule],
   providers: [],
   bootstrap: [AppComponent],
 })
