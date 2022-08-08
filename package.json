@@ -1,5 +1,5 @@
 {
-  "name": "news-list-app",
+  "name": "news-list-app-with-local",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
