@@ -11,5 +11,5 @@ export interface News {
   publishedDate: string;
   title: string;
   titleImageUrl: string;
-  url: string;
+  url?: string;
 }

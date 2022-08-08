@@ -13,7 +13,10 @@ export class NewsPreviewComponent {
   @Input() public news: News | null = null;
   @Input() public localNews: boolean = false;
 
-  public goToNews(url: string) {
+  public goToNews(url: string | null) {
+    if (!url) {
+      return;
+    }
     this._router.navigateByUrl(url.split('/')[1]);
   }
 }

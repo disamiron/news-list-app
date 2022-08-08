@@ -1,5 +1,5 @@
 <div *ngIf="news" class="preview" [ngClass]="{ local: localNews }">
-  <div class="news" (click)="goToNews(news.url)">
+  <div class="news" (click)="goToNews(news.url ? news.url : null)">
     <div class="info">
       <div class="description">
         <p class="main" [title]="news.description">{{ news.description }}</p>
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="img">
-      <img [src]="news.titleImageUrl || '../../../assets/img/plug.svg'" />
+      <img [src]="news.titleImageUrl || '../assets/img/plug.svg'" />
     </div>
   </div>
 </div>
