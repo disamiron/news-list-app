@@ -18,3 +18,11 @@
 .mb-30 {
   margin-bottom: 30px;
 }
+@media (max-width: 900px) {
+  .managment {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+  }
+}

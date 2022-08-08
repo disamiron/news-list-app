@@ -58,3 +58,29 @@
     }
   }
 }
+@media (max-width: 900px) {
+  .preview {
+    width: 100%;
+    width: 400px;
+    .news {
+      .info {
+        .description {
+          width: 100%;
+        }
+      }
+    }
+    .img {
+      img {
+        width: 100% !important;
+        height: 300px !important;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .preview {
+    width: 350px;
+  }
+}
