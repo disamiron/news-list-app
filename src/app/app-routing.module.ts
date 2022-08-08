@@ -5,11 +5,11 @@ import { NewsListPageComponent } from './pages/news-list/news-list.component';
 
 const routes: Routes = [
   {
-    path: 'news-list-app',
+    path: '',
     component: NewsListPageComponent,
   },
   {
-    path: 'news-list-app/avto-novosti/:url',
+    path: 'avto-novosti/:url',
     component: NewsInfoPageComponent,
   },
 ];
