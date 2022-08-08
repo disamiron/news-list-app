@@ -1,7 +1,7 @@
 <div *ngIf="news" class="preview">
   <div class="news">
     <div class="img">
-      <img [src]="news.titleImageUrl" />
+      <img [src]="news.titleImageUrl || '../../../assets/img/plug.svg'" />
     </div>
     <div class="info">
       <div class="description">

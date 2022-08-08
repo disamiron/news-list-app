@@ -24,7 +24,7 @@ export class NewsCreateComponent {
   public form: FormGroup = this._fb.group({
     description: [null, [Validators.required]],
     title: [null, [Validators.required]],
-    titleImageUrl: [null, [Validators.required]],
+    titleImageUrl: [null],
   });
 
   public saveNews() {

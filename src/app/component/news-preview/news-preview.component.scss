@@ -1,5 +1,5 @@
 .local {
-  background-color: rgba(204, 232, 247, 0.363) !important;
+  background-color: rgb(214 214 253 / 54%) !important;
 }
 
 .preview {
@@ -48,6 +48,7 @@
     }
     .img {
       img {
+        object-fit: cover;
         width: 300px;
         height: 200px;
       }

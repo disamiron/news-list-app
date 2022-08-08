@@ -9,7 +9,7 @@ const routes: Routes = [
     component: NewsListPageComponent,
   },
   {
-    path: 'avto-novosti/:url',
+    path: ':url',
     component: NewsInfoPageComponent,
   },
 ];

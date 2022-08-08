@@ -1,9 +1,12 @@
 <form [formGroup]="form" class="form">
-  <span>Введите заголовок</span>
-  <input formControlName="description" class="description" />
-
-  <span>Введите описание</span>
-  <textarea formControlName="title" class="title"></textarea>
+  <mat-form-field appearance="fill">
+    <mat-label>Введите описание</mat-label>
+    <input formControlName="description" class="description" matInput />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Введите описание</mat-label>
+    <textarea formControlName="title" class="title" matInput></textarea>
+  </mat-form-field>
 </form>
 
 <div class="buttons">
@@ -13,15 +16,17 @@
     (change)="onFileSelected()"
     id="file"
   />
+
   <button
-    mat-button
-    class="confirm"
+    mat-raised-button
+    color="primary"
     (click)="saveNews()"
     [disabled]="form.invalid"
+    class="mr-20"
   >
     Сохранить
   </button>
-  <button mat-button mat-dialog-close="cancel" class="cancel" color="gray">
+  <button mat-raised-button mat-dialog-close="cancel" color="gray">
     Отменить
   </button>
 </div>
